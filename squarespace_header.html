@@ -8,16 +8,16 @@
 		var xolaTrigger = '<div style="display:none" id="xola-trigger" class="xola-checkout xola-custom" data-seller="5591610092670545328b457f"></div>';
 		$('body').append(xolaTrigger);
     
-	    // Get each button that should trigger the xola code.
-	    var mainNavCTA = $('#mainNavigation div').last();
-	    var mobileNavCTA = $('#mobileNavigation div').last();
-	    var bannerCTA = $('div[data-collection-id="56c7801501dbae727e43db92"] a:nth-last-child(2)'); // (Change collection id to 5632ca6de4b0ca3d190d8408 for Escape City).
-	    var prefooterCTA = $('.sqs-block-button-container--right .sqs-block-button-element--medium.sqs-block-button-element').last();
+		// Get each button that should trigger the xola code.
+		var mainNavCTA = $('#mainNavigation div').last();
+		var mobileNavCTA = $('#mobileNavigation div').last();
+		var bannerCTA = $('div[data-collection-id="56c7801501dbae727e43db92"] a:nth-last-child(2)'); // (Change collection id to 5632ca6de4b0ca3d190d8408 for Escape City).
+		var prefooterCTA = $('.sqs-block-button-container--right .sqs-block-button-element--medium.sqs-block-button-element').last();
 	    
-	    // Have each button listen for a click, upon which prevent default behaviour
-	    // and trigger the xola code.
-	    var triggerables = [mainNavCTA, mobileNavCTA, bannerCTA, prefooterCTA]
-	    $.each(triggerables, function(index, value) {
+		// Have each button listen for a click, upon which prevent default behaviour
+		// and trigger the xola code.
+		var triggerables = [mainNavCTA, mobileNavCTA, bannerCTA, prefooterCTA]
+		$.each(triggerables, function(index, value) {
 			value.click( function(e) {
 				e.preventDefault();
 				$('#xola-trigger').trigger("click");
@@ -28,12 +28,12 @@
   
 <!-- Setup Xola -->
 <script type="text/javascript">
-  (function() { 
-    var co=document.createElement("script");
-    co.type="text/javascript";
-    co.async=true;
-    co.src="https://xola.com/checkout.js";
-    var s=document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(co, s);
-  })();
+	(function() { 
+		var co=document.createElement("script");
+		co.type="text/javascript";
+		co.async=true;
+		co.src="https://xola.com/checkout.js";
+		var s=document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(co, s);
+	})();
 </script>
